@@ -8,11 +8,27 @@
     border-radius: 30px;
     padding: 1rem;
     display: flex;
-    
+
 
 }
 
 .tier-list > h1 {
     padding-right: 10px;
     border-right: 1px solid black;
+}
+
+#non-tier-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.item-container {
+    width: 75px;
+    height: 75px;
+}
+
+.item-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
