@@ -8,7 +8,7 @@ imageForm.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log("form submitted");
     const imageItemInput = document.getElementById('image-item');
-    if(tierInput.value === '') {
+    if(imageItemInput.value === '') {
         alert('Please enter a valid image url');
         return;
     }
