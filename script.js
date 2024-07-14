@@ -65,6 +65,8 @@ function createTierList(tierListName) {
 
     const tierSection = document.getElementById('tier-list-section');
     tierSection.appendChild(newTierList);
+
+    RandomColorGenerator(newTierList)
 }
 
 function createTierListItem(imageUrl) {
@@ -111,4 +113,12 @@ function setUpDropZoneInTierListItem(tierListItem) {
         }
 
     });
+}
+
+function RandomColorGenerator(newTierList){
+    const colorOne = Math.round(Math.random()*255)
+    const colorTwo = Math.round(Math.random()*255)
+    const colorThree = Math.round(Math.random()*255)
+    const generatedColor = `rgb(${colorOne},${colorTwo},${colorThree})`
+    newTierList.style.backgroundColor = generatedColor
 }
