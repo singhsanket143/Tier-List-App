@@ -50,7 +50,7 @@ function createTierList(tierListName) {
     heading.classList.add('heading');
 
     const textContainer = document.createElement('input');
-    textContainer.readOnly = true;
+    textContainer.setAttribute('readonly',false)
     textContainer.setAttribute('type','text')
     textContainer.value = tierListName;
     
@@ -79,6 +79,19 @@ function createTierList(tierListName) {
     editTierList.setAttribute('class',"ri-edit-2-line")
     newTierList.appendChild(editTierList)
     
+
+
+    let toggle = true;
+    editTierList.addEventListener("click",()=>{
+        if(toggle){
+            textContainer.removeAttribute('readOnly',true)
+            toggle = false
+        }else{
+            textContainer.setAttribute('readOnly',false)
+            toggle = true
+        }
+    })
+
     
     // different color generator for tier list
     RandomColorGenerator(newTierList)
