@@ -1,20 +1,40 @@
-#tier {
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #242222;
+}
+
+h1, label {
+    color: white;
+
+}
+#tier, #image-item {
     padding: 5px;
+}
+
+.submitBtn {
+    padding: 5px 10px;
+    background-color: #FF7F7F;
+    border-radius: 10px;
 }
 
 .tier-list {
     margin-top: 2rem;
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 1rem;
+    border: 1px solid white;
     display: flex;
-
+    height: 75px;
 
 }
 
-.tier-list > h1 {
-    padding-right: 10px;
-    border-right: 1px solid black;
+.heading {
+    border-right: 1px solid white;
+    background-color: #FF7F7F;
+    height: 100%;
+    font-size: xx-large;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #non-tier-section {
@@ -25,6 +45,7 @@
 .item-container {
     width: 75px;
     height: 75px;
+    margin-left: 5px;
 }
 
 .tier-list-items {

@@ -46,8 +46,13 @@ function createTierList(tierListName) {
 
     newTierList.classList.add('tier-list');
 
-    const heading = document.createElement('h1');
-    heading.textContent = tierListName;
+    const heading = document.createElement('div'); // Try to randomly assign color to this heading
+    heading.classList.add('heading');
+
+    const textContainer = document.createElement('div');
+    textContainer.textContent = tierListName;
+
+    heading.appendChild(textContainer);
 
     const newTierListItems = document.createElement('div');
     newTierListItems.classList.add('tier-list-items');
@@ -85,6 +90,11 @@ function setUpItemContainerForDrag(itemContainer) {
         currentDraggedItem = event.target.parentNode;
     });
 
+    itemContainer.addEventListener('dblclick', (event) => {
+        const parentNode = event.target.parentNode;
+        const nonTierSection = document.getElementById('non-tier-section');
+        nonTierSection.appendChild(parentNode);
+    });
 }
 
 function setUpDropZoneInTierListItem(tierListItem) {
