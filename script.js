@@ -1,7 +1,6 @@
 let currentDraggedItem;
 
 const tierInput = document.getElementById('tier');
-
 const itemContainers = document.getElementsByClassName('item-container');
 
 // const tierLists = document.querySelectorAll('.tier-list');
@@ -39,6 +38,7 @@ submitBtn.addEventListener('click', (event) => {
     }
     createTierList(tierInput.value);
     tierInput.value = '';
+    
 });
 
 function createTierList(tierListName) {
@@ -49,8 +49,11 @@ function createTierList(tierListName) {
     const heading = document.createElement('div'); // Try to randomly assign color to this heading
     heading.classList.add('heading');
 
-    const textContainer = document.createElement('div');
-    textContainer.textContent = tierListName;
+    const textContainer = document.createElement('input');
+    textContainer.setAttribute('readonly',false)
+    textContainer.setAttribute('type','text')
+    textContainer.value = tierListName;
+    
 
     heading.appendChild(textContainer);
 
@@ -65,6 +68,36 @@ function createTierList(tierListName) {
 
     const tierSection = document.getElementById('tier-list-section');
     tierSection.appendChild(newTierList);
+
+    // added am icon of remove ( cross )
+    const removeTierList = document.createElement("i")
+    removeTierList.setAttribute('class',"ri-delete-bin-5-line")
+    newTierList.appendChild(removeTierList)
+
+    // added am icon of EDIT ( PEN )
+    const editTierList = document.createElement("i")
+    editTierList.setAttribute('class',"ri-edit-2-line")
+    newTierList.appendChild(editTierList)
+    
+
+
+    let toggle = true;
+    editTierList.addEventListener("click",()=>{
+        if(toggle){
+            textContainer.removeAttribute('readOnly',true)
+            toggle = false
+        }else{
+            textContainer.setAttribute('readOnly',false)
+            toggle = true
+        }
+    })
+
+    
+    // different color generator for tier list
+    RandomColorGenerator(newTierList)
+
+    setUpEditRemove(textContainer)
+
 }
 
 function createTierListItem(imageUrl) {
@@ -112,3 +145,28 @@ function setUpDropZoneInTierListItem(tierListItem) {
 
     });
 }
+
+function RandomColorGenerator(newTierList){
+    const colorOne = Math.round(Math.random()*255)
+    const colorTwo = Math.round(Math.random()*255)
+    const colorThree = Math.round(Math.random()*255)
+    const generatedColor = `rgb(${colorOne},${colorTwo},${colorThree})`
+    newTierList.style.backgroundColor = generatedColor
+}
+
+// remove and edit 
+    function setUpEditRemove(){
+        // why here we cannot use class selector ?
+        const iconsRemove = document.querySelectorAll('.ri-delete-bin-5-line')
+        iconsRemove.forEach((e)=>{
+            removeTierList(e)
+        })
+        // remove function
+        function removeTierList(iconsRemove){
+            iconsRemove.addEventListener("click",(event)=>{
+                const tierList = event.target.parentNode
+                tierList.remove()
+            })      
+        }
+    }
+
