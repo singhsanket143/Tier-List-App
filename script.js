@@ -83,16 +83,6 @@ function createTierList(tierListName) {
     // different color generator for tier list
     RandomColorGenerator(newTierList)
 
-    // edit function ( not able to do it)
-    const iconsEdit = document.querySelector('.ri-edit-2-line')
-    // edit function
-    function editList(iconsEdit,textContainer){
-        iconsEdit.addEventListener('click',(e)=>{
-            console.log(textContainer.value)
-            console.log(e)
-        })
-    }
-
     setUpEditRemove(textContainer)
 
 }
