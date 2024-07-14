@@ -26,12 +26,21 @@ h1, label {
     height: 75px;
 
 }
-
+i{
+    padding: 10px;
+    cursor: pointer;
+}
 .heading {
     min-width: 200px;
     font-size: xx-large;
     font-weight: lighter;
     padding-left: 10px;
+}
+.heading>input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: xx-large;
 }
 
 .tier-list{
