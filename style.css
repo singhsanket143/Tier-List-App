@@ -27,6 +27,11 @@
     height: 75px;
 }
 
+.tier-list-items {
+    min-width: 50%;
+    display: flex;
+}
+
 .item-container > img {
     width: 100%;
     height: 100%;
