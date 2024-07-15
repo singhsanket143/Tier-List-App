@@ -1,7 +1,27 @@
+:root {
+    --bright-red: #FF5733;
+    --electric-blue: #1F75FE;
+    --sunshine-yellow: #FFDD33;
+    --forest-green: #228B22;
+    --deep-purple: #6A0DAD;
+    --magenta: #FF00FF;
+    --sky-blue: #87CEEB;
+    --orange: #FFA500;
+    --teal: #008080;
+    --salmon-pink: #FA8072;
+}
+
+
 body {
     padding: 0;
     margin: 0;
     background-color: #242222;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
 
 h1, label {
@@ -12,10 +32,13 @@ h1, label {
     padding: 5px;
 }
 
-.submitBtn {
+
+.submitBtn ,.deleteBtn{
     padding: 5px 10px;
     background-color: #FF7F7F;
     border-radius: 10px;
+    border:none;
+
 }
 
 .tier-list {
@@ -23,6 +46,8 @@ h1, label {
     border: 1px solid white;
     display: flex;
     height: 75px;
+    /* justify-content: space-between; */
+    align-items: center;
 
 }
 
@@ -32,6 +57,7 @@ h1, label {
     height: 100%;
     font-size: xx-large;
     font-weight: lighter;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,10 +77,47 @@ h1, label {
 .tier-list-items {
     min-width: 50%;
     display: flex;
+    /* background-color: red; */
+    height: 100%;
+    
 }
 
 .item-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.color1{
+    background-color: var(--bright-red);
+}
+.color2{
+    background-color: var(--electric-blue);
+}
+.color3{
+    background-color: var(--forest-green);
+}
+.color4{
+    background-color: var(--deep-purple);
+}
+.color6{
+    background-color: var(--salmon-pink);
+}
+
+.color7{
+    background-color: var(--teal);
+}
+.color8{
+    background-color: var(--orange);
+}
+.color9{
+    background-color: var(--sky-blue);
+}
+.color10{
+    background-color: var(--magenta);
+}
+.deleteBtn{
+    position: absolute;
+    right:0px;
+    height: 30px;
 }
