@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tier List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <h1>
-        Your Own Tier List App...
-    </h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Your Own Tier List App...</h1>
 
     <form>
-        <label for="tier">Tier:</label>
-        <input type="text" id="tier" name="tier" placeholder="Give the tier name ..." >
-        <button type="submit" id="submit" class="submitBtn">Click me</button>
-
+      <label for="tier">Tier:</label>
+      <input
+        type="text"
+        id="tier"
+        name="tier"
+        placeholder="Give the tier name ..."
+      />
+      <button type="submit" id="submit" class="submitBtn">Click me</button>
     </form>
 
-    <hr>
+    <hr />
 
-   <form id="image-form">
-        <label for="image-item">Item:</label>
-        <input type="text" id="image-item" name="item" placeholder="Give the item image url ..." >
-        <button type="submit" id="submitImage" class="submitBtn">Click me</button>
-    </form> 
+    <form id="image-form">
+      <label for="image-item">Item:</label>
+      <input
+        type="text"
+        id="image-item"
+        name="item"
+        placeholder="Give the item image url ..."
+      />
+      <button type="submit" id="submitImage" class="submitBtn">Click me</button>
+    </form>
 
-    <hr>
+    <hr />
 
     <section id="tier-list-section">
-        <!-- <div class="tier-list">
+      <!-- <div class="tier-list">
             <h1>Sample Tier List</h1>
             <div class="tier-list-items">
 
             </div>
         </div> -->
-        
     </section>
 
     <section id="non-tier-section">
-        <div class="item-container" draggable="true">
-            <img 
-                src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
-            />
-        </div>
-        
+      <div class="item-container" draggable="true">
+        <img
+          src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
+        />
+      </div>
     </section>
 
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
