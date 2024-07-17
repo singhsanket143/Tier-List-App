@@ -1,54 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tier List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0dcec699b7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <div class="container">
 
-    <h1>
-        Your Own Tier List App...
-    </h1>
-
-    <form>
-        <label for="tier">Tier:</label>
-        <input type="text" id="tier" name="tier" placeholder="Give the tier name ..." >
-        <button type="submit" id="submit" class="submitBtn">Click me</button>
-
-    </form>
-
-    <hr>
-
-   <form id="image-form">
-        <label for="image-item">Item:</label>
-        <input type="text" id="image-item" name="item" placeholder="Give the item image url ..." >
-        <button type="submit" id="submitImage" class="submitBtn">Click me</button>
-    </form> 
-
-    <hr>
-
-    <section id="tier-list-section">
-        <!-- <div class="tier-list">
-            <h1>Sample Tier List</h1>
-            <div class="tier-list-items">
-
-            </div>
-        </div> -->
-        
-    </section>
-
-    <section id="non-tier-section">
-        <div class="item-container" draggable="true">
-            <img 
-                src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
-            />
+        <div class="section">
+            <h1 class="app-name">
+                Tier List App
+            </h1>
         </div>
-        
-    </section>
+
+        <div class="section">
+            <div class="form-section">
+                <form>
+                    <label for="tier">Tier : </label>
+                    <input type="text" id="tier" name="tier" placeholder="Give the tier name ...">
+                    <button type="submit" id="submit" class="submitBtn">Click me</button>
+                </form>
+
+                <form id="image-form">
+                    <label for="image-item">Item : </label>
+                    <input type="text" id="image-item" name="item" placeholder="Give the item image url ...">
+                    <button type="submit" id="submitImage" class="submitBtn">Click me</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="section">
+            <section id="tier-list-section">
+                <!-- <div class="tier-list">
+                    <div>Sample Tier List</div>
+                    <div class='list-container'> 
+                        <div class="tier-list-items"></div>
+                        <div class="btn-container">
+                            <i>remove</i>
+                            <i>edit</i>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+
+        <div class="section">
+            <section id="non-tier-section">
+                <div class="item-container" draggable="true">
+                    <img
+                        src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg" />
+                </div>
+            </section>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
+
 </html>
