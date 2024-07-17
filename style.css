@@ -1,51 +1,106 @@
-body {
+/* CSS reset */
+* {
     padding: 0;
     margin: 0;
-    background-color: #242222;
+    box-sizing: border-box;
 }
 
-h1, label {
-    color: white;
-
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: 100vh;
+    width: 100vw;
 }
-#tier, #image-item {
+
+.container {
+    padding: 30px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* Styling Form Section */
+.form-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+form > label {
+    color: #444;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 17px;
+}
+
+.form-section input {
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fffff0f9;
+    color: #999;
     padding: 5px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .submitBtn {
-    padding: 5px 10px;
-    background-color: #FF7F7F;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.911); 
+    border: none;
+    color: white; 
+    padding: 6px 14px; 
+    text-align: center;
+    text-decoration: none; 
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;  
+}
+
+.submitBtn:hover {
+    background-color: #555;
+    color: white;
 }
 
 .tier-list {
-    margin-top: 2rem;
-    border: 1px solid white;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     display: flex;
+    width: 100%;
     height: 75px;
-
 }
 
 .heading {
-    border-right: 1px solid white;
-    background-color: #FF7F7F;
+    /* background-color: #555; */
+    padding: 10px;
+    color: #fff;
     height: 100%;
-    font-size: xx-large;
-    font-weight: lighter;
+    border-radius: 20px 0 0 20px;
+    font-size: 30px;
+    font-weight: 300;
     display: flex;
     align-items: center;
-    justify-content: center;
+    font-family: "Ubuntu";
+    width: 200px;
+    text-transform: capitalize;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 #non-tier-section {
     display: flex;
-    gap: 1rem;
 }
 
 .item-container {
     width: 75px;
     height: 75px;
-    margin-left: 5px;
+    transition: transform 0.5s ease; 
+    cursor: pointer;
 }
 
 .tier-list-items {
@@ -57,4 +112,35 @@ h1, label {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 1s ease;
+    filter: grayscale(0.4);
+}
+
+.list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    width: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ccc;
+    border-radius: 0 20px 20px 0;
+}
+
+.edit-input {
+    padding: 10px;
+    color: #313131;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    font-size: 30px;
+    font-weight: 300;
+    width: 200px;
+    text-transform: capitalize;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
