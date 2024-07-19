@@ -3,52 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tier List</title>
+    <title>Tier List App</title>
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+   <div class="main-div">
+        <h1>TierMaker</h1>
+        <div class="sub-title">
+            <span>Your Own Tier List App</span>
+            <button id="tips-btn" title="Tips"><i class='bx bxs-bulb'></i></button>
+        </div>
+   </div>
 
-    <h1>
-        Your Own Tier List App...
-    </h1>
+   <div class="input-section">
+        <form class="tier-input">
+            <label for="tier" class="input-label">Tier:</label>
+            <input class="input-board" type="text" id="tier" name="tier" placeholder="Give the tier name">
+            <button type="submit" id="submit" class="input-btn">Add Tier</button>
+        </form>
 
-    <form>
-        <label for="tier">Tier:</label>
-        <input type="text" id="tier" name="tier" placeholder="Give the tier name ..." >
-        <button type="submit" id="submit" class="submitBtn">Click me</button>
-
-    </form>
-
-    <hr>
-
-   <form id="image-form">
-        <label for="image-item">Item:</label>
-        <input type="text" id="image-item" name="item" placeholder="Give the item image url ..." >
-        <button type="submit" id="submitImage" class="submitBtn">Click me</button>
-    </form> 
-
-    <hr>
+        <form id="image-form" class="tier-input">
+            <label for="img-item" class="input-label">Image:</label>
+            <input class="input-board" type="text" name="img-item" id="img-item" placeholder="Give the image url">
+            <button type="submit" id="submitImage" class="input-btn">Add Image</button>
+        </form>
+   </div>
+    
 
     <section id="tier-list-section">
+
         <!-- <div class="tier-list">
-            <h1>Sample Tier List</h1>
+
+            <h2 class="heading">Sample list</h2>
+
             <div class="tier-list-items">
 
             </div>
+
+            <div class="function-ico">
+                <i class='bx bxs-message-rounded-edit edit-btn'></i>
+                <i class='bx bxs-trash delete-btn'></i>
+            </div>
+
         </div> -->
         
+
     </section>
 
     <section id="non-tier-section">
-        <div class="item-container" draggable="true">
-            <img 
-                src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
-            />
-        </div>
-        
+        <h2 class="pending-items">Available Images:</h2>
+        <!-- <div class="item-container">
+            <img src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg">
+        </div> -->
     </section>
+    
+    <div class="tips-section">
+        <div class="tips-modal">
+            <div class="tips-top">
+                <h3 style="letter-spacing: 0.2rem;">Tips</h3>
+                <button id="modal-closing"><i class='bx bx-x-circle'></i></button>
+            </div>
+            <p>1: 🏆 Create tiers: Enter a name and hit "Add Tier"</p>
+            <p>2: 🖼️ Add images: Paste a URL and click "Add Image"</p>
+            <p>3: 🖱️ Organize: Drag and drop images into tiers</p>
+            <p>4: ↩️ Remove from tier: Double-click an image</p>
+            <p>5: 🗑️ Delete tier: Click the trash icon</p>
+            <p>6: ✏️ Rename tier: Hit the edit button</p>
+            <p>7: ❌ Permanently delete image: Click on image and press 'R'</p>    
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>

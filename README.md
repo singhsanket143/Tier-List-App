@@ -1,32 +1,42 @@
-# Drag and Drop Tier List App
+# Tier List Creator
 
-This is a drag and drop based tier list app that allows users to create and customize their own tier lists. Users can easily drag and drop items into different tiers, making it convenient to organize and rank various elements.
+Create, manage, and customize your own tier lists with this interactive web application.
+
+![Tier List Screenshot 1](images/1.png)
+![Tier List Screenshot 2](images/2.png)
+![Tier List Screenshot 3](images/3.png)
+![Tier List Screenshot 4](images/4.png)
 
 ## Features
 
-- **Drag and Drop Functionality**: Users can effortlessly drag and drop items from a list onto different tiers within the tier list.
-- **Customizable Tiers**: Users can create and customize their own tiers based on their specific needs and preferences.
-- **Item Management**: Easily add, remove, and edit items within each tier.
+- Create custom tier lists with personalized categories
+- Drag and drop items to organize your tier list
+- Edit tier list names after creation
+- Delete unwanted tier lists
+- Automatic saving using local storage for easy retrieval
+- Tips section accessible by clicking the bulb button, providing instructions for users
+
+## How to Use
+
+1. Open the application in your web browser.
+2. Click on "Create New Tier List" to start a new list.
+3. Add items to your tier list by typing in the input field and clicking "Add Item".
+4. Drag and drop items into the appropriate tiers.
+5. Use the "Edit Name" button to change the title of your tier list.
+6. Use the "Delete" button to remove unwanted tier lists.
 
 
-## Screenshots
+## Technical Details
 
-![Screenshot 1](/images/1.png)
-![Screenshot 2](/images/2.png)
-![Screenshot 3](/images/3.png)
-![Screenshot 4](/images/4.png)
+This project is built using:
 
-## Installation
+- HTML5 for structure
+- CSS3 for styling and responsive design
+- JavaScript for interactive functionality
+- Local Storage API for data persistence
 
-1. Clone the repository: `git clone https://github.com/your-username/drag-and-drop-tier-list-app.git`
-2. Navigate to the project directory: `cd drag-and-drop-tier-list-app`
-3. Open the `index.html` file in your web browser.
+## Future Improvements
 
-
-## Usage
-
-1. Open the app in your web browser.
-2. Create a new tier list or select an existing one.
-3. Drag and drop items from the list onto the desired tier.
-4. Customize the tiers and items as needed.
-
+- Implement responsive design to ensure optimal user experience across various devices and screen sizes
+- Add media queries to adjust layout and element sizes for mobile and tablet views
+- Enhance UI elements for better visibility and interaction on mobile devices
