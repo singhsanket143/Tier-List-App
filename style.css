@@ -1,60 +1,230 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
     padding: 0;
     margin: 0;
+    font-family: "Noto Sans", sans-serif;
     background-color: #242222;
+    color: #fff;
 }
 
-h1, label {
-    color: white;
-
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    color: #fff;
+    padding: 4px;
 }
-#tier, #image-item {
+
+.main-div > h1{
+    margin: 1px;
+    font-size: 30px;
+    font-family: "Playwrite CU", cursive;
+    letter-spacing: 0.3rem;
+}
+
+.main-div  .sub-title{
+    display: flex;
+    font-size: large;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+}
+
+.main-div #tips-btn{
+    top: 3rem;
+    border: none;
+    background-color: transparent;
+    color: #fca311;
+    font-size: 2rem;
+    right: 2rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+.main-div #tips-btn:hover{
+    color: #ffbe0b;
+}
+
+
+.input-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px;
+    letter-spacing: 0.1rem;
+}
+.tier-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-section .input-label{
+   font-size: 20px;
+}
+
+.input-section .input-board{
     padding: 5px;
+    border-radius: 8px;
+    font-weight: 400;
+    /* border-color: #1B95E0; */
+}
+.input-section .input-board:focus-within{
+    outline: none;
+    border-color: #1B95E0;
 }
 
-.submitBtn {
-    padding: 5px 10px;
-    background-color: #FF7F7F;
-    border-radius: 10px;
+.input-section .input-btn{
+    background-color: #1B95E0;
+    color: #ffffff;
+    padding: 3px 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.tier-list {
-    margin-top: 2rem;
-    border: 1px solid white;
+.input-section .input-btn:hover{
+    background-color: #026daf;
+}
+
+#tier-list-section{
     display: flex;
-    height: 75px;
-
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 85%;
+    margin: 10px auto;
 }
 
-.heading {
-    border-right: 1px solid white;
-    background-color: #FF7F7F;
+.tier-list{
+    display: flex;
+    height: 65px;
+    width: 100%;
+    align-items: center;
+}
+
+.tier-list .heading {
+    display: flex;
+    width: 13%;
     height: 100%;
-    font-size: xx-large;
-    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 400;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #111010;
+}
+
+.tier-list .tier-list-items{
     display: flex;
+    background-color: #1A1A17;
+    width: 82%;
+    align-items: center;
+    padding: 0px 5px;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.tier-list .function-ico{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    gap: 8px;
+    background-color: #101010;
+    height: 100%;
     align-items: center;
     justify-content: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 7%;
+    cursor: pointer;
 }
 
-#non-tier-section {
+.function-ico .edit-btn:hover{
+    color:bisque;
+}
+
+.function-ico .delete-btn:hover{
+    color:bisque;
+}
+
+
+#non-tier-section{
     display: flex;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 85%;
+    position: relative;
+    top: 5rem;
+    bottom: 30px;
+    border: 2px solid #fff;
+    padding: 5px 8px;
+    box-shadow: 1px 1px 10px #fff;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0px auto;
+    height: 6rem;
 }
 
-.item-container {
-    width: 75px;
-    height: 75px;
-    margin-left: 5px;
-}
-
-.tier-list-items {
-    min-width: 50%;
+.pending-items{
     display: flex;
+    justify-self: center;
+    align-self: center;
+    letter-spacing: 0.1rem;
 }
 
-.item-container > img {
+.item-container{
+    width: 70px;
+    height: 60px;  
+}
+
+.item-container > img{
+    display: flex;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+    border-radius: 5px;  
+}
+
+.tips-section{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tips-modal{
+    position: relative;
+    padding: 1rem 3rem;
+    color: #000000;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    background-color: #fff;
+}
+
+.tips-modal .tips-top{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.tips-top #modal-closing{
+   position: absolute;
+   top: 1px;
+   right: 0px;
+   border: none;
+   background: none;
+   font-size: 1.5rem;
+   cursor: pointer;
 }
