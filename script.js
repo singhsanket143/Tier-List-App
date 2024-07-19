@@ -48,6 +48,8 @@ function createTierList(tierListName) {
 
     const heading = document.createElement('div'); // Try to randomly assign color to this heading
     heading.classList.add('heading');
+    let randomcolor = addrandomcolor()
+    heading.style.backgroundColor = randomcolor
 
     const textContainer = document.createElement('div');
     textContainer.textContent = tierListName;
@@ -111,4 +113,15 @@ function setUpDropZoneInTierListItem(tierListItem) {
         }
 
     });
+}
+
+//Added ramdom color
+
+function addrandomcolor(){
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
