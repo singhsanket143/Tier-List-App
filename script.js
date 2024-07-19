@@ -55,6 +55,19 @@ function createTierList(tierListName) {
     textContainer.textContent = tierListName;
 
     heading.appendChild(textContainer);
+    
+    //Edit section
+    const editbtn = document.createElement('button')
+    editbtn.classList.add('editbutton')
+    editbtn.textContent = "Edit"
+    heading.appendChild(editbtn)
+
+    const inputsec = document.createElement('input')
+    inputsec.style.width = "100px"
+    inputsec.style.display = "none"
+    heading.appendChild(inputsec)
+
+    heading.appendChild(editbtn)
 
     const newTierListItems = document.createElement('div');
     newTierListItems.classList.add('tier-list-items');
@@ -67,6 +80,20 @@ function createTierList(tierListName) {
 
     const tierSection = document.getElementById('tier-list-section');
     tierSection.appendChild(newTierList);
+
+    editbtn.addEventListener('click' , () => {
+        if(inputsec.style.display == "none"){
+            inputsec.style.display = "block"
+            inputsec.value = textContainer.textContent
+            textContainer.textContent = ""
+            editbtn.textContent = "Save"
+        }
+        else{
+            textContainer.textContent = inputsec.value
+            inputsec.style.display = "none"
+            editbtn.textContent = "Edit"
+        }
+    })
 }
 
 function createTierListItem(imageUrl) {
