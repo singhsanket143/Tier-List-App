@@ -94,8 +94,14 @@ form > input{
     height: 80px;
     max-width: 92%;
     font-weight: 600;
-
 }
+
+/* .tier-list > .g-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
 
 .heading {
     border-right: 1px solid white;
@@ -106,10 +112,17 @@ form > input{
     /* overflow:; */
     word-break:break-all;
     font-size: large;
-    font-weight: lighter;
-    display: flex;
+    font-weight:500;
+    /* display: flex; */
     align-items: center;
-    justify-content: center;
+
+}
+
+.heading > .g-icons{
+  display: flex;
+  justify-content:end;
+  align-items: end;
+
 }
 
 #non-tier-section {
@@ -136,6 +149,8 @@ form > input{
 .tier-list-items {
     min-width: 50%;
     display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
 }
 
 .item-container > img {
