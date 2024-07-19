@@ -2,7 +2,7 @@
 
 Create, manage, and customize your own tier lists with this interactive web application.
 
-## Screenshots
+# Screenshots
 
 ![Tier List Screenshot 1](images/1.png)
 ![Tier List Screenshot 2](images/2.png)
