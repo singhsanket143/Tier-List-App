@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tier List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tier List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>
-        Your Own Tier List App...
-    </h1>
+  <h1 id="heading">
+    Your own <span style="color:rgb(55, 225, 225);  background-color: transparent;">Tier List App ...</span>
+  </h1>
 
-    <form>
-        <label for="tier">Tier:</label>
-        <input type="text" id="tier" name="tier" placeholder="Give the tier name ..." >
-        <button type="submit" id="submit" class="submitBtn">Click me</button>
-
-    </form>
-
-    <hr>
-
-   <form id="image-form">
-        <label for="image-item">Item:</label>
-        <input type="text" id="image-item" name="item" placeholder="Give the item image url ..." >
-        <button type="submit" id="submitImage" class="submitBtn">Click me</button>
-    </form> 
-
-    <hr>
-
-    <section id="tier-list-section">
-        <!-- <div class="tier-list">
-            <h1>Sample Tier List</h1>
-            <div class="tier-list-items">
-
-            </div>
-        </div> -->
+  <form>
+    <label for="tier">Tier:</label>
+    <input type="text" id="tier" name="tier" placeholder="Give the tier name ....">
+    <button type="submit" id="submit" value="Submit"><span style="border: 2px solid black">Click me</span></button>
+  </form>
+  <hr>
+  <form id="image-form">
+    <label for="image-item">Item:</label>
+    <input type="text" id="image-item" name="item" placeholder="Give the tier image  url ....">
+    <button type="submit" id="submitImage"><span style="border: 2px solid black">Click me</span></button>
+  </form>
+  <hr>
+  <section id="tier-list-section">
+    <!-- <div class="tier-list">
+      <h1>Sample Tier List</h1>
+      <div class="tier-list-items">
         
-    </section>
+      </div>
+      <div class="delete-icon"><img src="https://cdn-icons-png.freepik.com/512/3807/3807871.png" alt=""></div>
+    </div> -->
+  </section>
 
-    <section id="non-tier-section">
-        <div class="item-container" draggable="true">
-            <img 
-                src="https://cdn.britannica.com/30/182830-050-96F2ED76/Chris-Evans-title-character-Joe-Johnston-Captain.jpg"
-            />
-        </div>
-        
-    </section>
+  <section id="non-tier-section">
+    <!-- <div draggable="true"  class="item-container">
+      <img src="https://www.shutterstock.com/image-vector/ironman-art-design-vector-logo-260nw-2276342089.jpg">
+    </div> -->
+  </section>
 
-    <script src="script.js"></script>
-    
+  <!-- <script>
+    console.log("Hello");
+  </script> -->
+
+  <script src="script.js"></script>
 </body>
 </html>
+
