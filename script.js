@@ -48,6 +48,8 @@ function createTierList(tierListName) {
 
     const heading = document.createElement('div'); // Try to randomly assign color to this heading
     heading.classList.add('heading');
+    // heading.style.backgroundColor = `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
+    heading.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
 
     const textContainer = document.createElement('div');
     textContainer.textContent = tierListName;
